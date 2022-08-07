@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Progate - Horoskop</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <h1>Program Horoskop</h1>
+    <button onclick="horoskop()">Click here!</button>
+    <p>Keberuntungan Anda hari ini:</p>
+    <hr>
+    <div id="hs_res"></div>
+    <script>
+        function horoskop() {
+            const randomNumber = Date.now();
+            console.log(randomNumber);
+
+            switch (randomNumber) {
+                case (randomNumber % 4 == 0):
+                    document.getElementById('hs_res').innerHTML = 'Hebat!!';
+                    console.log("Hebat!!");
+                    break;
+                case (randomNumber % 7 == 0):
+                    document.getElementById('hs_res').innerHTML = 'Boleh juga!';
+                    console.log("Boleh juga!");
+                    break;
+                case (randomNumber % 5 == 0):
+                    document.getElementById('hs_res').innerHTML = 'Tetap Semangat!!!';
+                    console.log('Tetap Semangat!!!');
+                    break;
+                case (randomNumber % 3 == 0):
+                    document.getElementById('hs_res').innerHTML = 'Harus konsisten';
+                    console.log('Harus konsisten');
+                    break;
+                default:
+                    document.getElementById('hs_res').innerHTML = 'Mengerikan...';
+                    console.log('Mengerikan...');
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>
